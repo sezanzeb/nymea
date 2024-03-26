@@ -41,6 +41,11 @@ class DebugHandler : public JsonHandler
 {
     Q_OBJECT
 public:
+    enum DebugError {
+        DebugErrorNoError
+    };
+    Q_ENUM(DebugError)
+
     enum LoggingCategoryType {
         LoggingCategoryTypeSystem,
         LoggingCategoryTypePlugin,

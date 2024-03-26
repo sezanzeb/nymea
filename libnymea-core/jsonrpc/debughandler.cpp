@@ -39,6 +39,7 @@ namespace nymeaserver {
 DebugHandler::DebugHandler(QObject *parent)
     : JsonHandler{parent}
 {
+    registerEnum<DebugHandler::DebugError>();
     registerEnum<DebugHandler::LoggingLevel>();
     registerEnum<DebugHandler::LoggingCategoryType>();
 
@@ -60,6 +61,7 @@ DebugHandler::DebugHandler(QObject *parent)
     description = "Set the logging category with the given name to the given logging level.";
     params.insert("name", enumValueName(String));
     params.insert("level", enumRef<DebugHandler::LoggingLevel>());
+    returns.insert("debugError", enumRef<DebugHandler::DebugError>());
     registerMethod("SetLoggingCategoryLevel", description, params, returns);
 }
 
