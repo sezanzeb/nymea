@@ -1,3 +1,12 @@
+nymea (1.10.0) jammy; urgency=medium
+
+  [ Simon Stürz ]
+  * WIP: Add systemd notify support
+  * Remove unused signal
+  * modbus RTU: add platform configuration
+
+ -- jenkins <developer@nymea.io>  Fri, 26 Jul 2024 15:38:56 +0200
+
 nymea (1.9.3) jammy; urgency=medium
 
   [ Simon Stürz ]
